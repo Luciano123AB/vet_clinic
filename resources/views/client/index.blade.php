@@ -13,6 +13,33 @@
                         <a href="/client/new" class="btn btn-success">New Client</a>
                     </div>
                     <br>
+
+                    <div class="box-body no-padding">
+                        <table id="tb_default" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th style="width: 10px;">#</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Cell Phone</th>
+                                    <th style="width: 250px;">&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($clients as $client)
+                                    <tr>
+                                        <td>{{ $client->id }}</td>
+                                        <td>{{ $client->name }}</td>
+                                        <td>{{ $client->email }}</td>
+                                        <td>{{ $client->cell_phone }}</td>
+                                        <td>
+                                            <a href="/client/edit/{{ $client->id }}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>Edit</a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
