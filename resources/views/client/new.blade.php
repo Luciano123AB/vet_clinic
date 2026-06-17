@@ -12,7 +12,7 @@
                     <br>
 
                     <div class="box-body no-padding">
-                        <form action="/client/new" method="post" role="form">
+                        <form action="/client" method="post" role="form">
                             @csrf
 
                             <div class="box-body">
