@@ -87,6 +87,8 @@ class ClientController extends Controller
 
             return redirect('/client');
         }
+
+        return redirect('/client');
     }
 
     /**
@@ -94,6 +96,12 @@ class ClientController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $theClient = Client::find($id);
+
+        if (isset($theClient)) {
+            $theClient->delete();
+        }
+
+        return redirect('/client');
     }
 }
