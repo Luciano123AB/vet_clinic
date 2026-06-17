@@ -87,6 +87,8 @@ class ClientController extends Controller
 
             return redirect('/client');
         }
+
+        return redirect('/client');
     }
 
     /**
