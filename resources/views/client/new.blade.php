@@ -18,7 +18,7 @@
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="name">Nome</label>
-                                    <input type="text" class="form-control" id="name" name="name">
+                                    <input type="text" class="form-control" id="name" name="name" oninvalid="this.setCustomValidity('Campo requerido.')" onchange="try{setCustomValidity('')}catch(e){}" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email</label>
