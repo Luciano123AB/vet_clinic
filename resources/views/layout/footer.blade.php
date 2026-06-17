@@ -1,1 +1,2 @@
-<h1> Footer </h1>
+<h1> Teste Footer </h1>
+<p> Curso Laravel </p>
