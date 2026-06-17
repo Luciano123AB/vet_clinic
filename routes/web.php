@@ -7,4 +7,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Clients:
 Route::get('/client', [ClientController::class, 'index']);
+Route::get('/client/new', [ClientController::class, 'create']);
