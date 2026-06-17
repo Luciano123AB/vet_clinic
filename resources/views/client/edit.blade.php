@@ -35,33 +35,33 @@
                                 <div class="form-group">
                                     <label>Estado (states of Brazil):</label>
                                     <select class="form-control" id="state" name="state">
-                                        <option value="AC">AC</option>
-                                        <option value="AL">AL</option>
-                                        <option value="AP">AP</option>
-                                        <option value="AM">AM</option>
-                                        <option value="BA">BA</option>
-                                        <option value="CE">CE</option>
-                                        <option value="DF">DF</option>
-                                        <option value="ES">ES</option>
-                                        <option value="GO">GO</option>
-                                        <option value="MA">MA</option>
-                                        <option value="MT">MT</option>
-                                        <option value="MS">MS</option>
-                                        <option value="MG">MG</option>
-                                        <option value="PA">PA</option>
-                                        <option value="PB">PB</option>
-                                        <option value="PR">PR</option>
-                                        <option value="PE">PE</option>
-                                        <option value="PI">PI</option>
-                                        <option value="RJ">RJ</option>
-                                        <option value="RN">RN</option>
-                                        <option value="RS">RS</option>
-                                        <option value="RO">RO</option>
-                                        <option value="RR">RR</option>
-                                        <option value="SC">SC</option>
-                                        <option value="SP">SP</option>
-                                        <option value="SE">SE</option>
-                                        <option value="TO">TO</option>
+                                        <option value="AC" @if ($theClient->state == 'AC') {{ 'selected' }} @endif>AC</option>
+                                        <option value="AL" @if ($theClient->state == 'AL') {{ 'selected' }} @endif>AL</option>
+                                        <option value="AP" @if ($theClient->state == 'AP') {{ 'selected' }} @endif>AP</option>
+                                        <option value="AM" @if ($theClient->state == 'AM') {{ 'selected' }} @endif>AM</option>
+                                        <option value="BA" @if ($theClient->state == 'BA') {{ 'selected' }} @endif>BA</option>
+                                        <option value="CE" @if ($theClient->state == 'CE') {{ 'selected' }} @endif>CE</option>
+                                        <option value="DF" @if ($theClient->state == 'DF') {{ 'selected' }} @endif>DF</option>
+                                        <option value="ES" @if ($theClient->state == 'ES') {{ 'selected' }} @endif>ES</option>
+                                        <option value="GO" @if ($theClient->state == 'GO') {{ 'selected' }} @endif>GO</option>
+                                        <option value="MA" @if ($theClient->state == 'MA') {{ 'selected' }} @endif>MA</option>
+                                        <option value="MT" @if ($theClient->state == 'MT') {{ 'selected' }} @endif>MT</option>
+                                        <option value="MS" @if ($theClient->state == 'MS') {{ 'selected' }} @endif>MS</option>
+                                        <option value="MG" @if ($theClient->state == 'MG') {{ 'selected' }} @endif>MG</option>
+                                        <option value="PA" @if ($theClient->state == 'PA') {{ 'selected' }} @endif>PA</option>
+                                        <option value="PB" @if ($theClient->state == 'PB') {{ 'selected' }} @endif>PB</option>
+                                        <option value="PR" @if ($theClient->state == 'PR') {{ 'selected' }} @endif>PR</option>
+                                        <option value="PE" @if ($theClient->state == 'PE') {{ 'selected' }} @endif>PE</option>
+                                        <option value="PI" @if ($theClient->state == 'PI') {{ 'selected' }} @endif>PI</option>
+                                        <option value="RJ" @if ($theClient->state == 'RJ') {{ 'selected' }} @endif>RJ</option>
+                                        <option value="RN" @if ($theClient->state == 'RN') {{ 'selected' }} @endif>RN</option>
+                                        <option value="RS" @if ($theClient->state == 'RS') {{ 'selected' }} @endif>RS</option>
+                                        <option value="RO" @if ($theClient->state == 'RO') {{ 'selected' }} @endif>RO</option>
+                                        <option value="RR" @if ($theClient->state == 'RR') {{ 'selected' }} @endif>RR</option>
+                                        <option value="SC" @if ($theClient->state == 'SC') {{ 'selected' }} @endif>SC</option>
+                                        <option value="SP" @if ($theClient->state == 'SP') {{ 'selected' }} @endif>SP</option>
+                                        <option value="SE" @if ($theClient->state == 'SE') {{ 'selected' }} @endif>SE</option>
+                                        <option value="TO" @if ($theClient->state == 'TO') {{ 'selected' }} @endif>TO</option>
                                     </select>
                                 </div>
                             </div>
