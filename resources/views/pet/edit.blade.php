@@ -61,15 +61,15 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="father">Pai</label>
-                                    <input type="text" class="form-control" id="father" name="father" value="{{ $thePet->father }}">
+                                    <input type="text" class="form-control" id="father" name="father">
                                 </div>
                                 <div class="form-group">
                                     <label for="mother">Mãe</label>
-                                    <input type="text" class="form-control" id="mother" name="mother" value="{{ $thePet->mother }}">
+                                    <input type="text" class="form-control" id="mother" name="mother">
                                 </div>
                                 <div class="form-group">
                                     <label>Observações</label>
-                                    <textarea class="form-control" id="observations" name="observations" rows="4" value="{{ $thePet->observations }}"></textarea>
+                                    <textarea class="form-control" id="observations" name="observations" rows="4"></textarea>
                                 </div>
                             </div>
                             <br>
