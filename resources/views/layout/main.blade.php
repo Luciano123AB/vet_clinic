@@ -25,7 +25,7 @@
                             <a class="nav-link" aria-current="page" href="/client">Clients</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                            <a class="nav-link" href="/pet">Pets</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Pricing</a>
