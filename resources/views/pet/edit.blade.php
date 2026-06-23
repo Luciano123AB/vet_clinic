@@ -12,7 +12,7 @@
                     <br>
 
                     <div class="box-body no-padding">
-                        <form action="/pet" method="post" role="form" enctype="multipart/form-data">
+                        <form action="/pet/{{ $thePet->id }}" method="post" role="form" enctype="multipart/form-data">
                             @csrf
 
                             <div class="box-body">
