@@ -21,36 +21,51 @@
                                     <input type="text" class="form-control" id="name" name="name" oninvalid="this.setCustomValidity('Campo requerido.')" onchange="try{setCustomValidity('')}catch(e){}" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="photo">Photo</label>
+                                    <label for="photo">Foto</label>
                                     <input type="file" class="form-control" id="photo" name="photo">
                                 </div>
                                 <div class="form-group">
-                                    <label for="specie">Specie</label>
+                                    <label for="specie">Espécie</label>
                                     <input type="text" class="form-control" id="specie" name="specie">
                                 </div>
                                 <div class="form-group">
-                                    <label for="breed">Breed</label>
+                                    <label for="breed">Raça</label>
                                     <input type="text" class="form-control" id="breed" name="breed">
                                 </div>
                                 <div class="form-group">
-                                    <label for="color">Color</label>
+                                    <label for="color">Cor</label>
                                     <input type="text" class="form-control" id="color" name="color">
                                 </div>
                                 <div class="form-group">
-                                    <label for="breed">Breed</label>
-                                    <input type="text" class="form-control" id="breed" name="breed">
+                                    <label for="height">Altura</label>
+                                    <input type="number" class="form-control" id="height" name="height" step="0.001" value="0.000" placeholder="0.000">
                                 </div>
                                 <div class="form-group">
-                                    <label for="breed">Breed</label>
-                                    <input type="text" class="form-control" id="breed" name="breed">
+                                    <label for="weight">Peso</label>
+                                    <input type="number" class="form-control" id="weight" name="weight" step="0.001" value="0.000" placeholder="0.000">
                                 </div>
                                 <div class="form-group">
-                                    <label for="breed">Breed</label>
-                                    <input type="text" class="form-control" id="breed" name="breed">
+                                    <label for="gender">Gênero</label>
+                                    <select class="form-control" id="gender" name="gender">
+                                        <option value="M">M</option>
+                                        <option value="F">F</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="breed">Breed</label>
-                                    <input type="text" class="form-control" id="breed" name="breed">
+                                    <label for="birth_date">Data de Nascimento</label>
+                                    <input type="date" class="form-control" id="birth_date" name="birth_date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="father">Pai</label>
+                                    <input type="text" class="form-control" id="father" name="father">
+                                </div>
+                                <div class="form-group">
+                                    <label for="mother">Mãe</label>
+                                    <input type="text" class="form-control" id="mother" name="mother">
+                                </div>
+                                <div class="form-group">
+                                    <label>Observações</label>
+                                    <textarea class="form-control" id="observations" name="observations" rows="4"></textarea>
                                 </div>
                             </div>
                             <br>
