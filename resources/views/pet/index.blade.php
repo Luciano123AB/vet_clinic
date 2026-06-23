@@ -39,8 +39,8 @@
                                         <td>{{ $pet->gender }}</td>
                                         <td>Date</td>
                                         <td>
-                                            <a href="/pet/edit/{{ $client->id }}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>Edit</a>
-                                            <a href="/pet/delete/{{ $client->id }}" class="btn btn-danger btn-xs" onclick="return confirm('Do you want to delete this record id = {{ $client->id }}?')"><i class="fa fa-trash"></i>Delete</a>
+                                            <a href="/pet/edit/{{ $pet->id }}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>Edit</a>
+                                            <a href="/pet/delete/{{ $pet->id }}" class="btn btn-danger btn-xs" onclick="return confirm('Do you want to delete this record id = {{ $pet->id }}?')"><i class="fa fa-trash"></i>Delete</a>
                                         </td>
                                     </tr>
                                 @endforeach
