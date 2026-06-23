@@ -72,7 +72,14 @@ class PetController extends Controller
      */
     public function edit(string $id)
     {
-        //
+
+        $thePet = Pet::find($id);
+
+        if (isset($thePet)) {
+            return view('pet.edit', compact('thePet'));
+        }
+
+        return redirect('/pet');
     }
 
     /**
