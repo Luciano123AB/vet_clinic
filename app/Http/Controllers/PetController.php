@@ -103,12 +103,12 @@ class PetController extends Controller
                 }            
             }
             
-            $thePet->save();
+            $theClient->save();
 
-            return redirect('/pet');
+            return redirect('/client');
         }
 
-        return redirect('/pet');
+        return redirect('/client');
     }
 
     /**
