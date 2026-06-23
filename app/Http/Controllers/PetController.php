@@ -41,7 +41,7 @@ class PetController extends Controller
         if (!$request->file('photo')) {
             $thePet->photo_path = '';
         } else {
-            $thePet->photo_path = $request->file('photo')->store('public');
+            $thePet->photo_path = $request->file('photo')->store('photos');
         }
 
         $thePet->specie = $request->input('specie');
