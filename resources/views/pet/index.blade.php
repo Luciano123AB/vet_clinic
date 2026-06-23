@@ -29,17 +29,18 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($clients as $client)
+                                @foreach ($pets as $pet)
                                     <tr>
-                                        <td>{{ $client->id }}</td>
-                                        <td>{{ $client->name }}</td>
-                                        <td>{{ $client->email }}</td>
-                                        <td>{{ $client->cell_phone }}</td>
-                                        <td>{{ $client->address }}</td>
-                                        <td>{{ $client->state }}</td>
+                                        <td>{{ $pet->id }}</td>
+                                        <td>photo</td>
+                                        <td>{{ $pet->name }}</td>
+                                        <td>client</td>
+                                        <td>{{ $pet->specie }}</td>
+                                        <td>{{ $pet->gender }}</td>
+                                        <td>Date</td>
                                         <td>
-                                            <a href="/client/edit/{{ $client->id }}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>Edit</a>
-                                            <a href="/client/delete/{{ $client->id }}" class="btn btn-danger btn-xs" onclick="return confirm('Do you want to delete this record id = {{ $client->id }}?')"><i class="fa fa-trash"></i>Delete</a>
+                                            <a href="/pet/edit/{{ $client->id }}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>Edit</a>
+                                            <a href="/pet/delete/{{ $client->id }}" class="btn btn-danger btn-xs" onclick="return confirm('Do you want to delete this record id = {{ $client->id }}?')"><i class="fa fa-trash"></i>Delete</a>
                                         </td>
                                     </tr>
                                 @endforeach
