@@ -42,22 +42,22 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="height">Altura</label>
-                                    <input type="number" class="form-control" id="height" name="height" step="0.001" value="0.000" placeholder="0.000" value="{{ $thePet->height }}">
+                                    <input type="number" class="form-control" id="height" name="height" step="0.001" placeholder="0.000" value="{{ $thePet->height }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="weight">Peso</label>
-                                    <input type="number" class="form-control" id="weight" name="weight" step="0.001" value="0.000" placeholder="0.000">
+                                    <input type="number" class="form-control" id="weight" name="weight" step="0.001" placeholder="0.000" value="{{ $thePet->weight }}">
                                 </div>
                                 <div class="form-group">
                                     <label for="gender">Gênero</label>
                                     <select class="form-control" id="gender" name="gender">
-                                        <option value="M">M</option>
-                                        <option value="F">F</option>
+                                        <option value="M" @if($thePet->gender == 'M') {{ 'selected' }} @endif>M</option>
+                                        <option value="F" @if($thePet->gender == 'F') {{ 'selected' }} @endif>F</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="birth_date">Data de Nascimento</label>
-                                    <input type="date" class="form-control" id="birth_date" name="birth_date" required>
+                                    <input type="date" class="form-control" id="birth_date" name="birth_date" value="{{ $thePet->birth_date }}" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="father">Pai</label>
@@ -69,7 +69,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Observações</label>
-                                    <textarea class="form-control" id="observations" name="observations" rows="4" value="{{ $thePet->observations }}"></textarea>
+                                    <textarea class="form-control" id="observations" name="observations" rows="4">{{ $thePet->observations }}</textarea>
                                 </div>
                             </div>
                             <br>
