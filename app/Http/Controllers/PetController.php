@@ -87,7 +87,28 @@ class PetController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        
+        $thePet = Pet::find($id);
+
+        if (isset($thePet)) { //Selecionou sem foto.
+            $thePet->name = $request->input('name');
+
+            $no_photo = $request->input('no_photo');
+
+            if (isset($no_photo)) {
+                $thePet->photo_path = '';
+            } else { //Com foto.
+                if ($request->file('photo')) {
+                    $thePet->photo_path = $request->file('photo')->store('photos');
+                }            
+            }
+            
+            $thePet->save();
+
+            return redirect('/pet');
+        }
+
+        return redirect('/pet');
     }
 
     /**
