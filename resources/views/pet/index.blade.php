@@ -32,7 +32,7 @@
                                 @foreach ($pets as $pet)
                                     <tr>
                                         <td>{{ $pet->id }}</td>
-                                        <td><img src="{{ asset('storage/' . $pet->photo_path) }}" alt="photo" style="max-width: 100%;"></td>
+                                        <td><img src="{{ asset('storage/' . $pet->photo_path) }}" alt="photo" style="max-width: 70%;"></td>
                                         <td>{{ $pet->name }}</td>
                                         <td>Client</td>
                                         <td>{{ $pet->specie }}</td>
