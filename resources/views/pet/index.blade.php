@@ -32,12 +32,12 @@
                                 @foreach ($pets as $pet)
                                     <tr>
                                         <td>{{ $pet->id }}</td>
-                                        <td>photo</td>
+                                        <td><img src="{{ asset('storage/' . $pet->photo_path) }}" alt="photo" style="max-width: 100%;"></td>
                                         <td>{{ $pet->name }}</td>
-                                        <td>client</td>
+                                        <td>Client</td>
                                         <td>{{ $pet->specie }}</td>
                                         <td>{{ $pet->gender }}</td>
-                                        <td>Date</td>
+                                        <td>{{ \Carbon\Carbon::parse($pet->birth_date)->format('d/m/Y') }}</td>
                                         <td>
                                             <a href="/pet/edit/{{ $pet->id }}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>Edit</a>
                                             <a href="/pet/delete/{{ $pet->id }}" class="btn btn-danger btn-xs" onclick="return confirm('Do you want to delete this record id = {{ $pet->id }}?')"><i class="fa fa-trash"></i>Delete</a>
