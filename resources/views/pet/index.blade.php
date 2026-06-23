@@ -34,7 +34,7 @@
                                         <td>{{ $pet->id }}</td>
                                         <td>photo</td>
                                         <td>{{ $pet->name }}</td>
-                                        <td>client</td>
+                                        <td>Client</td>
                                         <td>{{ $pet->specie }}</td>
                                         <td>{{ $pet->gender }}</td>
                                         <td>Date</td>
