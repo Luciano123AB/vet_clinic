@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
 use App\Models\Pet;
 use Illuminate\Http\Request;
 
@@ -25,7 +26,12 @@ class PetController extends Controller
      */
     public function create()
     {
-        return view('pet.new');
+
+        $clients = Client::all();
+
+        if (isset($clients)) {
+            return view('pet.new', compact('clients'));
+        }
     }
 
     /**
