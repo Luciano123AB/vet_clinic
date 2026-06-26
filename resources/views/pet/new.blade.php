@@ -1,6 +1,19 @@
 @extends('layout.main')
 
 @section('body')
+    <script>
+        function close_modal() {
+            $('#modalClientPet').modal('hide');
+        }
+
+        function add_client_to_pet(element) {
+            document.getElementById('id_client').value = document.getElementById('grid_client_pet').rows[element.parentNode.parentNode.rowIndex].cells[0].innerHTML;
+            document.getElementById('client_pet').value = document.getElementById('grid_client_pet').rows[element.parentNode.parentNode.rowIndex].cells[1].innerHTML;
+
+            close_modal();
+        }
+    </script>
+
     {{-- Modal Client --}}
     <div class="modal fade" id="modalClientPet" tabindex="-1" aria-labelledby="modalClientPetLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -15,6 +28,7 @@
                             <tr>
                                 <th style="width: 10px;">#</th>
                                 <th>Name</th>
+                                <th style="width: 140px;">&nbsp;</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -22,6 +36,11 @@
                                 <tr>
                                     <td>{{ $client->id }}</td>
                                     <td>{{ $client->name }}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-xs btn-primary" data-bs-toggle="tooltip" data-placement="top" onclick="add_client_to_pet(this)">
+                                            <i class="fa fa-plus"></i> Selecionar
+                                        </button>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
