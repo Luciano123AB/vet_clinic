@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\PetController;
+use App\Http\Controllers\ProcedureController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -24,3 +25,6 @@ Route::post('/pet', [PetController::class, 'store']);
 Route::get('/pet/edit/{id}', [PetController::class, 'edit']);
 Route::post('/pet/{id}', [PetController::class, 'update']);
 Route::get('/pet/delete/{id}', [PetController::class, 'destroy']);
+
+//Procedures:
+Route::get('/procedure', [ProcedureController::class, 'index']);
