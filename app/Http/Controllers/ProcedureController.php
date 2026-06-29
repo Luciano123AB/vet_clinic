@@ -89,6 +89,13 @@ class ProcedureController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        
+        $theProcedure = Procedure::find($id);
+
+        if (isset($theProcedure)) {
+            $theProcedure->delete();
+        }
+
+        return redirect('/procedure');
     }
 }
