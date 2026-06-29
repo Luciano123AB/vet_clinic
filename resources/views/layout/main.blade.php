@@ -31,6 +31,9 @@
                             <a class="nav-link" href="/procedure">Procedimentos</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="/vet">Veterinários</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                         </li>
                     </ul>

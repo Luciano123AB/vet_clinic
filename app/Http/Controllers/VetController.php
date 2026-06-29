@@ -25,7 +25,7 @@ class VetController extends Controller
      */
     public function create()
     {
-        //
+        return view('vet.new');
     }
 
     /**
