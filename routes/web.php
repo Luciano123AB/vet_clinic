@@ -31,3 +31,4 @@ Route::get('/procedure', [ProcedureController::class, 'index']);
 Route::get('/procedure/new', [ProcedureController::class, 'create']);
 Route::post('/procedure', [ProcedureController::class, 'store']);
 Route::get('/procedure/edit/{id}', [ProcedureController::class, 'edit']);
+Route::post('/procedure/{id}', [ProcedureController::class, 'update']);

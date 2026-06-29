@@ -72,7 +72,16 @@ class ProcedureController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        
+        $theProcedure = Procedure::find($id);
+
+        if (isset($theProcedure)) {
+            $theProcedure->name = $request->input('name');
+            $theProcedure->price = $request->input('price');
+            $theProcedure->save();
+        }
+
+        return redirect('/procedure');
     }
 
     /**
