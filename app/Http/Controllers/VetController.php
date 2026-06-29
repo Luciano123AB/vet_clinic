@@ -34,14 +34,14 @@ class VetController extends Controller
     public function store(Request $request)
     {
 
-        $thevet = new Vet();
+        $theVet = new Vet();
 
-        $thevet->name = $request->input('name');
-        $thevet->email = $request->input('email');
-        $thevet->cell_phone = $request->input('cell_phone');
-        $thevet->address = $request->input('address');
-        $thevet->state = $request->input('state');
-        $thevet->save();
+        $theVet->name = $request->input('name');
+        $theVet->email = $request->input('email');
+        $theVet->cell_phone = $request->input('cell_phone');
+        $theVet->address = $request->input('address');
+        $theVet->state = $request->input('state');
+        $theVet->save();
 
         return redirect('/vet');
     }
