@@ -34,7 +34,14 @@ class ProcedureController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $theProcedure = new Procedure();
+
+        $theProcedure->name = $request->input('name');
+        $theProcedure->price = $request->input('price');
+        $theProcedure->save();
+
+        return redirect('/procedure');
     }
 
     /**
@@ -50,7 +57,14 @@ class ProcedureController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        
+        $theProcedure = Procedure::find($id);
+
+        if (isset($theProcedure)) {
+            return view('procedure.edit', compact('theProcedure'));
+        }
+
+        return redirect('/procedure');
     }
 
     /**

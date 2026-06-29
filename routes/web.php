@@ -29,3 +29,5 @@ Route::get('/pet/delete/{id}', [PetController::class, 'destroy']);
 //Procedures:
 Route::get('/procedure', [ProcedureController::class, 'index']);
 Route::get('/procedure/new', [ProcedureController::class, 'create']);
+Route::post('/procedure', [ProcedureController::class, 'store']);
+Route::get('/procedure/edit/{id}', [ProcedureController::class, 'edit']);
