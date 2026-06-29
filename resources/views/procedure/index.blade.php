@@ -28,6 +28,7 @@
                                 @foreach ($procedures as $procedure)
                                     <tr>
                                         <td>{{ $procedure->id }}</td>
+                                        <td>{{ $procedure->name }}</td>
                                         <td>{{ $procedure->price }}</td>
                                         <td>
                                             <a href="/procedure/edit/{{ $procedure->id }}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>Edit</a>
