@@ -102,9 +102,11 @@ class PetController extends Controller
     {
         
         $thePet = Pet::find($id);
+        $theClient = Client::find($request->input('id_client'));
 
         if (isset($thePet)) { //Selecionou sem foto.
             $thePet->name = $request->input('name');
+            $thePet->client()->associate($theClient);
 
             $no_photo = $request->input('no_photo');
 
