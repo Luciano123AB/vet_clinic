@@ -34,7 +34,7 @@
                                         <td>{{ $pet->id }}</td>
                                         <td><img src="{{ asset('storage/' . $pet->photo_path) }}" alt="photo" style="max-width: 70%;"></td>
                                         <td>{{ $pet->name }}</td>
-                                        <td>{{ $pet->client->name }}</td>
+                                        <td>{{ $pet->client->name ?? '' }}</td>
                                         <td>{{ $pet->specie }}</td>
                                         <td>{{ $pet->gender }}</td>
                                         <td>{{ \Carbon\Carbon::parse($pet->birth_date)->format('d/m/Y') }}</td>
