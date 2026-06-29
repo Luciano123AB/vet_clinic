@@ -33,7 +33,17 @@ class VetController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $thevet = new Vet();
+
+        $thevet->name = $request->input('name');
+        $thevet->email = $request->input('email');
+        $thevet->cell_phone = $request->input('cell_phone');
+        $thevet->address = $request->input('address');
+        $thevet->state = $request->input('state');
+        $thevet->save();
+
+        return redirect('/vet');
     }
 
     /**
