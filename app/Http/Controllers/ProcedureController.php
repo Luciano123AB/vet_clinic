@@ -26,7 +26,7 @@ class ProcedureController extends Controller
      */
     public function create()
     {
-        //
+        return view('procedure.new');
     }
 
     /**
