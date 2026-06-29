@@ -1,6 +1,58 @@
 @extends('layout.main')
 
 @section('body')
+    <script>
+        function close_modal() {
+            $('#modalClientPet').modal('hide');
+        }
+
+        function add_client_to_pet(element) {
+            document.getElementById('id_client').value = document.getElementById('grid_client_pet').rows[element.parentNode.parentNode.rowIndex].cells[0].innerHTML;
+            document.getElementById('client_pet').value = document.getElementById('grid_client_pet').rows[element.parentNode.parentNode.rowIndex].cells[1].innerHTML;
+
+            close_modal();
+        }
+    </script>
+
+    {{-- Modal Client --}}
+    <div class="modal fade" id="modalClientPet" tabindex="-1" aria-labelledby="modalClientPetLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalClientPetLabel">Clients</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table id="grid_client_pet" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th style="width: 10px;">#</th>
+                                <th>Name</th>
+                                <th style="width: 140px;">&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($clients as $client)
+                                <tr>
+                                    <td>{{ $client->id }}</td>
+                                    <td>{{ $client->name }}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-xs btn-primary" data-bs-toggle="tooltip" data-placement="top" onclick="add_client_to_pet(this)">
+                                            <i class="fa fa-plus"></i> Selecionar
+                                        </button>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="alert alert-primary" role="alert">
         <h2>Edit Pet</h2>
     </div>
@@ -20,6 +72,16 @@
                                     <label for="name">Nome</label>
                                     <input type="text" class="form-control" id="name" name="name" oninvalid="this.setCustomValidity('Campo requerido.')" onchange="try{setCustomValidity('')}catch(e){}" value="{{ $thePet->name }}" required>
                                 </div>
+                                <div class="form-group">
+                                    <input type="hidden" class="form-control" id="id_client" name="id_client" value="{{ $thePet->id_client ?? '' }}" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="client_pet">Cliente:</label>
+                                    <input type="text" class="form-control" id="client_pet" name="client_pet" value="{{ $thePet->client->name ?? '' }}" onkeydown="return false" required>
+                                </div>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalClientPet">
+                                    Selecionar Cliente
+                                </button>
                                 <div class="form-check">
                                     <input type="checkbox" class="form-check-input" id="no_photo" name="no_photo">
                                     <label for="no_photo" class="no_photo">Sem Foto</label>

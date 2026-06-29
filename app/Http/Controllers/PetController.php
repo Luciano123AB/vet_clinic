@@ -86,9 +86,10 @@ class PetController extends Controller
     {
 
         $thePet = Pet::find($id);
+        $clients = Client::all();
 
         if (isset($thePet)) {
-            return view('pet.edit', compact('thePet'));
+            return view('pet.edit', compact('thePet', 'clients'));
         }
 
         return redirect('/pet');
