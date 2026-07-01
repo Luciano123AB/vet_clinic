@@ -94,6 +94,13 @@ class VetController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+
+        $theVet = Vet::find($id);
+
+        if (isset($theVet)) {
+            $theVet->delete();
+        }
+        
+        return redirect('/vet');
     }
 }

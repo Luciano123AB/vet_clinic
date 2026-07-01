@@ -41,3 +41,4 @@ Route::get('/vet/new', [VetController::class, 'create']);
 Route::post('/vet', [VetController::class, 'store']);
 Route::get('/vet/edit/{id}', [VetController::class, 'edit']);
 Route::post('/vet/{id}', [VetController::class, 'update']);
+Route::get('/vet/delete/{id}', [VetController::class, 'destroy']);
