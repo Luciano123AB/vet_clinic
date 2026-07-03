@@ -13,8 +13,6 @@ return new class extends Migration
     {
         Schema::create('procedures', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('consultation_id')->nullable();
-            $table->foreign('consultation_id')->references('id')->on('consultations')->onDelete('set null');
             $table->string('name');
             $table->decimal('price', 12, 2)->nullable(); //Preço
             $table->timestamps();
