@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('consultations', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('pet_id')->nullable();
+            $table->foreign('pet_id')->references('id')->on('pets')->onDelete('set null');
+            $table->unsignedBigInteger('vet_id')->nullable();
+            $table->foreign('vet_id')->references('id')->on('vets')->onDelete('set null');
+            $table->date('the_date');
+            $table->decimal('total_cost', 12, 2)->nullable(); //Custo do atendimento
             $table->timestamps();
         });
     }
