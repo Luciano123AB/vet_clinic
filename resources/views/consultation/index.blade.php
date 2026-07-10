@@ -37,8 +37,8 @@
                                         <td>vet</td>
                                         <td>total</td>
                                         <td>
-                                            <a href="/consultation/edit/{{ $consultation->id }}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>Edit</a>
-                                            <a href="/consultation/delete/{{ $consultation->id }}" class="btn btn-danger btn-xs" onclick="return confirm('Do you want to delete this record id = {{ $consultation->id }}?')"><i class="fa fa-trash"></i>Delete</a>
+                                            <a href="/client/edit/{{ $client->id }}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>Edit</a>
+                                            <a href="/client/delete/{{ $client->id }}" class="btn btn-danger btn-xs" onclick="return confirm('Do you want to delete this record id = {{ $client->id }}?')"><i class="fa fa-trash"></i>Delete</a>
                                         </td>
                                     </tr>
                                 @endforeach
