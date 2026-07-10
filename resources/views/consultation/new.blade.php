@@ -2,19 +2,39 @@
 
 @section('body')
     {{-- Modal Veterinário --}}
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalVets" tabindex="-1" aria-labelledby="modalVetsLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="modalVetsLabel">Veterinários</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <table id="grid_vet" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th style="width: 10px;">#</th>
+                                <th>Name</th>
+                                <th style="width: 140px;">&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($vets as $vet)
+                                <tr>
+                                    <td>{{ $vet->id }}</td>
+                                    <td>{{ $vet->name }}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-xs btn-primary" data-bs-toggle="tooltip" data-placement="top" onclick="add_vet(this)">
+                                            <i class="fa fa-plus"></i> Selecionar
+                                        </button>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
