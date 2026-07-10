@@ -1,6 +1,20 @@
 @extends('layout.main')
 
 @section('body')
+    <script>
+        //Veterinários
+        function close_modal_vets() {
+            $('#modalVets').modal('hide');
+        }
+
+        function add_vet(element) {
+            document.getElementById('id_vet').value = document.getElementById('grid_vet').rows[element.parentNode.parentNode.rowIndex].cells[0].innerHTML;
+            document.getElementById('vet_name').value = document.getElementById('grid_vet').rows[element.parentNode.parentNode.rowIndex].cells[1].innerHTML;
+
+            close_modal_vets();
+        }
+    </script>
+
     {{-- Modal Veterinário --}}
     <div class="modal fade" id="modalVets" tabindex="-1" aria-labelledby="modalVetsLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -65,6 +79,14 @@
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalVets">
                                     Selecione o Veterinário
                                 </button>
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="id_vet" name="id_vet" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="vet_name">Name:</label>
+                                    <input type="text" class="form-control" id="vet_name" name="vet_name" required readonly>
+                                </div>
 
                                 <div class="form-group">
                                     <label for="email">Email</label>
