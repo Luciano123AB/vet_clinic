@@ -13,6 +13,20 @@
 
             close_modal_vets();
         }
+
+        //Pets
+        function close_modal_pets() {
+            $('#modalPets').modal('hide');
+        }
+
+        function add_pet(element) {
+            document.getElementById('id_pet').value = document.getElementById('grid_pet').rows[element.parentNode.parentNode.rowIndex].cells[0].innerHTML;
+            document.getElementById('pet_name').value = document.getElementById('grid_pet').rows[element.parentNode.parentNode.rowIndex].cells[1].innerHTML;
+            document.getElementById('client').value = document.getElementById('grid_pet').rows[element.parentNode.parentNode.rowIndex].cells[2].innerHTML;
+            document.getElementById('specie').value = document.getElementById('grid_pet').rows[element.parentNode.parentNode.rowIndex].cells[3].innerHTML;
+
+            close_modal_pets();
+        }
     </script>
 
     {{-- Modal Veterinário --}}
@@ -62,7 +76,7 @@
                     <h1 class="modal-title fs-5" id="modalVetsLabel">Pets</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body table-responsive">
                     <table id="grid_pet" class="table table-bordered table-striped">
                         <thead>
                             <tr>
@@ -129,7 +143,7 @@
                                     <input type="hidden" class="form-control" id="id_vet" name="id_vet" readonly>
                                 </div>
                                 <div class="form-group">
-                                    <label for="vet_name">Name:</label>
+                                    <label for="vet_name">Nome:</label>
                                     <input type="text" class="form-control" id="vet_name" name="vet_name" required readonly>
                                 </div>
 
@@ -137,6 +151,24 @@
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPets">
                                     Selecione o Pet
                                 </button>
+
+                                <div class="form-group">
+                                    <input type="hidden" class="form-control" id="id_pet" name="id_pet" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pet_name">Nome:</label>
+                                    <input type="text" class="form-control" id="pet_name" name="pet_name" readonly>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="specie">Espécie:</label>
+                                    <input type="text" class="form-control" id="specie" name="specie" readonly>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="client">Cliente:</label>
+                                    <input type="text" class="form-control" id="client" name="client" readonly>
+                                </div>
 
                                 <div class="form-group">
                                     <label for="email">Email</label>
