@@ -19,6 +19,7 @@
             </div>
         </div>
     </div>
+    {{-- FIM - Modal Veterinário --}}
 
     <div class="alert alert-primary" role="alert">
         <h2>New Consultation</h2>
