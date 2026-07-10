@@ -27,6 +27,11 @@
 
             close_modal_pets();
         }
+
+        //Procedimentos
+        function close_modal_procedures() {
+            $('#modalProcedures').modal('hide');
+        }
     </script>
 
     {{-- Modal Veterinário --}}
@@ -113,6 +118,47 @@
         </div>
     </div>
     {{-- FIM - Modal Pet --}}
+    {{-- Modal Procedure --}}
+    <div class="modal fade" id="modalProcedures" tabindex="-1" aria-labelledby="modalProceduresLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalVetsLabel">Procedimentos</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body table-responsive">
+                    <table id="grid_pet" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th style="width: 10px;">#</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th style="width: 140px;">&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($procedures as $procedure)
+                                <tr>
+                                    <td>{{ $procedure->id }}</td>
+                                    <td>{{ $procedure->name }}</td>
+                                    <td>{{ $procedure->price }}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-xs btn-primary" data-bs-toggle="tooltip" data-placement="top" onclick="add_procedures_consultation(this)">
+                                            <i class="fa fa-plus"></i> Selecionar
+                                        </button>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- FIM - Modal Procedure --}}
 
     <div class="alert alert-primary" role="alert">
         <h2>New Consultation</h2>
@@ -134,7 +180,7 @@
                                     <input type="date" class="form-control" id="consultation_date" name="consultation_date" oninvalid="this.setCustomValidity('Campo requerido.')" onchange="try{setCustomValidity('')}catch(e){}" required>
                                 </div>
 
-                                <h3 class="text-success">Veterinário:</h3>
+                                <h3 class="text-success">VETERINÁRIO</h3>
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalVets">
                                     Selecione o Veterinário
                                 </button>
@@ -147,7 +193,7 @@
                                     <input type="text" class="form-control" id="vet_name" name="vet_name" required readonly>
                                 </div>
 
-                                <h3 class="text-danger">Pet:</h3>
+                                <h3 class="text-danger">PET</h3>
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPets">
                                     Selecione o Pet
                                 </button>
@@ -170,50 +216,21 @@
                                     <input type="text" class="form-control" id="client" name="client" readonly>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="text" class="form-control" id="email" name="email">
-                                </div>
-                                <div class="form-group">
-                                    <label for="cell_phone">Celular</label>
-                                    <input type="text" class="form-control" id="cell_phone" name="cell_phone">
-                                </div>
-                                <div class="form-group">
-                                    <label for="address">Endereço</label>
-                                    <input type="text" class="form-control" id="address" name="address">
-                                </div>
-                                <div class="form-group">
-                                    <label>Estado (states of Brazil):</label>
-                                    <select class="form-control" id="state" name="state">
-                                        <option value="AC">AC</option>
-                                        <option value="AL">AL</option>
-                                        <option value="AP">AP</option>
-                                        <option value="AM">AM</option>
-                                        <option value="BA">BA</option>
-                                        <option value="CE">CE</option>
-                                        <option value="DF">DF</option>
-                                        <option value="ES">ES</option>
-                                        <option value="GO">GO</option>
-                                        <option value="MA">MA</option>
-                                        <option value="MT">MT</option>
-                                        <option value="MS">MS</option>
-                                        <option value="MG">MG</option>
-                                        <option value="PA">PA</option>
-                                        <option value="PB">PB</option>
-                                        <option value="PR">PR</option>
-                                        <option value="PE">PE</option>
-                                        <option value="PI">PI</option>
-                                        <option value="RJ">RJ</option>
-                                        <option value="RN">RN</option>
-                                        <option value="RS">RS</option>
-                                        <option value="RO">RO</option>
-                                        <option value="RR">RR</option>
-                                        <option value="SC">SC</option>
-                                        <option value="SP">SP</option>
-                                        <option value="SE">SE</option>
-                                        <option value="TO">TO</option>
-                                    </select>
-                                </div>
+                                <h3 class="text-success">PROCEDIMENTO</h3>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProcedures">
+                                    Selecione o Procedimento
+                                </button>
+
+                                <table id="grid" class="table table-bordered table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Procedure</th>
+                                            <th>Price(R$)</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                </table>
                             </div>
                             <br>
 
