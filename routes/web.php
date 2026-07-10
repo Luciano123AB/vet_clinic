@@ -46,3 +46,4 @@ Route::get('/vet/delete/{id}', [VetController::class, 'destroy']);
 
 //Consultations:
 Route::get('/consultation', [ConsultationController::class, 'index']);
+Route::get('/consultation/new', [ConsultationController::class, 'create']);

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Consultation;
 use App\Models\Pet;
+use App\Models\Procedure;
 use App\Models\Vet;
 use Illuminate\Http\Request;
 
@@ -27,7 +28,14 @@ class ConsultationController extends Controller
      */
     public function create()
     {
-        //
+        
+        $pets = Pet::all();
+        $vets = Vet::all();
+        $procedures = Procedure::all();
+
+        if (isset($pets) && isset($vets) && isset($procedures)) {   
+            return view('consultation.create', compact('pets', 'vets', 'procedures'));
+        }
     }
 
     /**
