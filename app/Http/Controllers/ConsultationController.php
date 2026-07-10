@@ -34,7 +34,7 @@ class ConsultationController extends Controller
         $procedures = Procedure::all();
 
         if (isset($pets) && isset($vets) && isset($procedures)) {   
-            return view('consultation.create', compact('pets', 'vets', 'procedures'));
+            return view('consultation.new', compact('pets', 'vets', 'procedures'));
         }
     }
 

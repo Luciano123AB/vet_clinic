@@ -10,7 +10,7 @@
             <div class="col-md-12">
                 <div class="box box-primary">
                     <div class="box-header">
-                        <a href="/client/new" class="btn btn-success">New Consultation</a>
+                        <a href="/consultation/new" class="btn btn-success">New Consultation</a>
                     </div>
                     <br>
 

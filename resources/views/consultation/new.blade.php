@@ -1,8 +1,27 @@
 @extends('layout.main')
 
 @section('body')
+    {{-- Modal Veterinário --}}
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="alert alert-primary" role="alert">
-        <h2>New Client</h2>
+        <h2>New Consultation</h2>
     </div>
 
     <section class="content">
@@ -12,14 +31,20 @@
                     <br>
 
                     <div class="box-body no-padding">
-                        <form action="/client" method="post" role="form">
+                        <form action="/consultation" method="post" role="form" onsubmit="return check_fields()">
                             @csrf
 
                             <div class="box-body">
                                 <div class="form-group">
-                                    <label for="name">Nome</label>
-                                    <input type="text" class="form-control" id="name" name="name" oninvalid="this.setCustomValidity('Campo requerido.')" onchange="try{setCustomValidity('')}catch(e){}" required>
+                                    <label for="consultation_date">Data</label>
+                                    <input type="date" class="form-control" id="consultation_date" name="consultation_date" oninvalid="this.setCustomValidity('Campo requerido.')" onchange="try{setCustomValidity('')}catch(e){}" required>
                                 </div>
+
+                                <h3 class="text-success">Veterinário:</h3>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalVets">
+                                    Selecione o Veterinário
+                                </button>
+
                                 <div class="form-group">
                                     <label for="email">Email</label>
                                     <input type="text" class="form-control" id="email" name="email">
