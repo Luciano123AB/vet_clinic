@@ -231,6 +231,22 @@
                                         </tr>
                                     </thead>
                                 </table>
+
+                                <div class="row justify-content-end">
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                        <h5>
+                                            <span class="text-primary">Quantidade</span>
+                                            <span class="text-primary" id="qte_procedure_consultation">0</span>
+                                        </h5>
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-6 col-xs-12">
+                                        <h5>
+                                            <span class="text-danger">Total</span>
+                                            <span class="text-danger" id="consultation_value">0.00</span>
+                                        </h5>
+                                    </div>
+                                </div>
                             </div>
                             <br>
 
