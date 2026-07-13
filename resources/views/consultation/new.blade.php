@@ -225,7 +225,7 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Procedure</th>
+                                            <th>Name</th>
                                             <th>Price(R$)</th>
                                             <th>Actions</th>
                                         </tr>
