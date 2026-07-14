@@ -45,16 +45,16 @@
             cell_id.innerHTML = document.getElementById('grid_procedure').rows[element.parentNode.parentNode.rowIndex].cells[0].innerHTML;
             cell_name.innerHTML = document.getElementById('grid_procedure').rows[element.parentNode.parentNode.rowIndex].cells[1].innerHTML;
             cell_price.innerHTML = document.getElementById('grid_procedure').rows[element.parentNode.parentNode.rowIndex].cells[2].innerHTML;
-            cell_actions.innerHTLM = '<button type="button" class="btn btn-xs btn-danger" data-bs-toggle="tooltip" data-placement="top" onclick="remove_procedure_consultation(this)">' +
+            cell_actions.innerHTML = '<button type="button" class="btn btn-xs btn-danger" data-bs-toggle="tooltip" data-placement="top" onclick="remove_procedure_consultation(this)">' +
                                         '<i class="fa fa-trash"></i> Delete' +
                                      '</button>';
 
             //Atualizar(aumentando) a quantidade na tabela procedimentos:
-            document.getElementById('qte_procedure_consultation').innerHTLM = parseInt(document.getElementById('qte_procedure_consultation').innerHTLM) + 1;
+            document.getElementById('qte_procedure_consultation').innerHTML = parseInt(document.getElementById('qte_procedure_consultation').innerHTML) + 1;
             //Atualizar(aumentando) o valor na tabela procedimentos:
-            document.getElementById('consultation_value').innerHTLM = parseFloat(document.getElementById('consultation_value').innerHTLM) + parseFloat(document.getElementById('grid_procedure').rows[element.parentNode.parentNode.rowIndex].cells[2].innerHTML);
+            document.getElementById('consultation_value').innerHTML = parseFloat(document.getElementById('consultation_value').innerHTML) + parseFloat(document.getElementById('grid_procedure').rows[element.parentNode.parentNode.rowIndex].cells[2].innerHTML);
             //Total value:
-            document.getElementById('total_value').value = document.getElementById('consultation_value').innerHTLM;
+            document.getElementById('total_value').value = document.getElementById('consultation_value').innerHTML;
 
             close_modal_procedures();
         }
