@@ -52,7 +52,7 @@
             //Atualizar(aumentando) a quantidade na tabela procedimentos:
             document.getElementById('qte_procedure_consultation').innerHTLM = parseInt(document.getElementById('qte_procedure_consultation').innerHTLM) + 1;
             //Atualizar(aumentando) o valor na tabela procedimentos:
-            document.getElementById('consultation_value').innerHTLM = parseFloat(document.getElementById('consultation_value').innerHTLM) + parseFloat(document.getElementById('grid_procedures').rows[element.parentNode.parentNode.rowIndex].cells[2].innerHTML);
+            document.getElementById('consultation_value').innerHTLM = parseFloat(document.getElementById('consultation_value').innerHTLM) + parseFloat(document.getElementById('grid_procedure').rows[element.parentNode.parentNode.rowIndex].cells[2].innerHTML);
             //Total value:
             document.getElementById('total_value').value = document.getElementById('consultation_value').innerHTLM;
 
@@ -240,6 +240,16 @@
                                 <div class="form-group">
                                     <label for="client">Cliente:</label>
                                     <input type="text" class="form-control" id="client" name="client" readonly>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="total_value">Valor Total:</label>
+                                    <input type="text" class="form-control" id="total_value" name="total_value" readonly>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="memo_procedures">Memo Procedimentos:</label>
+                                    <input type="text" class="form-control" id="memo_procedures" name="memo_procedures" readonly>
                                 </div>
 
                                 <h3 class="text-success">PROCEDIMENTO</h3>
