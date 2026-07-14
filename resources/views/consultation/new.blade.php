@@ -32,6 +32,32 @@
         function close_modal_procedures() {
             $('#modalProcedures').modal('hide');
         }
+
+        function add_procedures_consultation(element) {
+
+            var table = document.getElementById('grid');
+            var row = table.insertRow(1);
+            var cell_id = row.insertCell(0);
+            var cell_name = row.insertCell(1);
+            var cell_price = row.insertCell(2);
+            var cell_actions = row.insertCell(3);
+
+            cell_id.innerHTML = document.getElementById('grid_procedure').rows[element.parentNode.parentNode.rowIndex].cells[0].innerHTML;
+            cell_name.innerHTML = document.getElementById('grid_procedure').rows[element.parentNode.parentNode.rowIndex].cells[1].innerHTML;
+            cell_price.innerHTML = document.getElementById('grid_procedure').rows[element.parentNode.parentNode.rowIndex].cells[2].innerHTML;
+            cell_actions.innerHTLM = '<button type="button" class="btn btn-xs btn-danger" data-bs-toggle="tooltip" data-placement="top" onclick="remove_procedure_consultation(this)">' +
+                                        '<i class="fa fa-trash"></i> Delete' +
+                                     '</button>';
+
+            //Atualizar(aumentando) a quantidade na tabela procedimentos:
+            document.getElementById('qte_procedure_consultation').innerHTLM = parseInt(document.getElementById('qte_procedure_consultation').innerHTLM) + 1;
+            //Atualizar(aumentando) o valor na tabela procedimentos:
+            document.getElementById('consultation_value').innerHTLM = parseFloat(document.getElementById('consultation_value').innerHTLM) + parseFloat(document.getElementById('grid_procedures').rows[element.parentNode.parentNode.rowIndex].cells[2].innerHTML);
+            //Total value:
+            document.getElementById('total_value').value = document.getElementById('consultation_value').innerHTLM;
+
+            close_modal_procedures();
+        }
     </script>
 
     {{-- Modal Veterinário --}}
@@ -127,7 +153,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body table-responsive">
-                    <table id="grid_pet" class="table table-bordered table-striped">
+                    <table id="grid_procedure" class="table table-bordered table-striped">
                         <thead>
                             <tr>
                                 <th style="width: 10px;">#</th>
