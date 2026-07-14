@@ -52,7 +52,7 @@
             //Atualizar(aumentando) a quantidade na tabela procedimentos:
             document.getElementById('qte_procedure_consultation').innerHTLM = parseInt(document.getElementById('qte_procedure_consultation').innerHTLM) + 1;
             //Atualizar(aumentando) o valor na tabela procedimentos:
-            document.getElementById('consultation_value').innerHTLM = parseFloat(document.getElementById('consultation_value').innerHTLM) + parseFloat(document.getElementById('grid_procedures').rows[element.parentNode.parentNode.rowIndex].cells[2].innerHTML);
+            document.getElementById('consultation_value').innerHTLM = parseFloat(document.getElementById('consultation_value').innerHTLM) + parseFloat(document.getElementById('grid_procedure').rows[element.parentNode.parentNode.rowIndex].cells[2].innerHTML);
             //Total value:
             document.getElementById('total_value').value = document.getElementById('consultation_value').innerHTLM;
 
