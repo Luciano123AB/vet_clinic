@@ -85,6 +85,13 @@
                 return false;
             }
 
+            //Procedure
+            if (document.getElementById('grid').rows.length < 2) {
+                alert('The consultation must have procedures!');
+
+                return false;
+            }
+
             //Generate json of procedures:
             var i;
             var my_json = '[';
