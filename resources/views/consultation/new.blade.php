@@ -298,12 +298,12 @@
                                     <input type="text" class="form-control" id="client" name="client" readonly>
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group" hidden>
                                     <label for="total_value">Valor Total:</label>
                                     <input type="text" class="form-control" id="total_value" name="total_value" readonly>
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group" hidden>
                                     <label for="memo_procedures">Memo Procedimentos:</label>
                                     <input type="text" class="form-control" id="memo_procedures" name="memo_procedures" readonly>
                                 </div>
