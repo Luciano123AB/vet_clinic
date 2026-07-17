@@ -69,6 +69,42 @@
             //Deletar row:
             document.getElementById('grid').deleteRow(element.parentNode.parentNode.rowIndex);
         }
+
+        function check_fields() {
+            //Vet
+            if (!$('#vet_name').val()) {
+                alert('The consultation must have a vet!');
+
+                return false;
+            }
+
+            //Pet
+            if (!$('#pet_name').val()) {
+                alert('The consultation must have a pet!');
+
+                return false;
+            }
+
+            //Generate json of procedures:
+            var i;
+            var my_json = '[';
+            var qty_commas = document.getElementById('grid').rows.length - 2;
+            var table_procedures_consultation = document.getElementById('grid');
+
+            document.getElementById('memo_procedures').value = '';
+
+            for (var i = 1, row; row = table_procedures_consultation.rows[i]; i++) {
+                my_json = my_json + '{"IDPROCEDURE":' + table_procedures_consultation.rows[i].cells[0].innerHTML + '}';
+
+                if (qty_commas > 0) {
+                    my_json = my_json + ',';
+                    qty_commas = qty_commas - 1;
+                }
+            }
+
+            my_json = my_json + ']';
+            document.getElementById('memo_procedures').value = my_json;
+        }
     </script>
 
     {{-- Modal Veterinário --}}
