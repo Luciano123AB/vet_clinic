@@ -96,6 +96,8 @@
             var i;
             var my_json = '[';
             var qty_commas = document.getElementById('grid').rows.length - 2;
+            //-2 because the first row has the name of the fields.
+            //Read all the procedures:
             var table_procedures_consultation = document.getElementById('grid');
 
             document.getElementById('memo_procedures').value = '';
