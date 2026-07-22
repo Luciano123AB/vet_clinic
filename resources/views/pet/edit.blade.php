@@ -73,7 +73,7 @@
                                     <input type="text" class="form-control" id="name" name="name" oninvalid="this.setCustomValidity('Campo requerido.')" onchange="try{setCustomValidity('')}catch(e){}" value="{{ $thePet->name }}" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="hidden" class="form-control" id="id_client" name="id_client" value="{{ $thePet->id_client ?? '' }}" required>
+                                    <input type="hidden" class="form-control" id="id_client" name="id_client" value="{{ $thePet->client_id ?? '' }}" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="client_pet">Cliente:</label>

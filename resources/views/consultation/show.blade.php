@@ -34,6 +34,34 @@
                         </table>
 
                         <h4 class="text-primary">Pet</h4>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr class="table-warning">
+                                    <th style="width: 10px;">#</th>
+                                    <th style="width: 250px;">Photo</th>
+                                    <th>Name</th>
+                                    <th>Owner</th>
+                                    <th>Specie</th>
+                                    <th>Gender</th>
+                                    <th>Birth Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{{ $theConsultation->pet->id }}</td>
+                                    <td>
+                                        <img src="{{ asset('storage/' . $theConsultation->pet->photo_path) }}" alt="Foto" style="max-width: 70%;">
+                                    </td>
+                                    <td>{{ $theConsultation->pet->name }}</td>
+                                    <td>{{ $theConsultation->pet->client->name }}</td>
+                                    <td>{{ $theConsultation->pet->specie }}</td>
+                                    <td>{{ $theConsultation->pet->gender }}</td>
+                                    <td>{{ \Carbon\Carbon::parse($theConsultation->pet->birth_date)->format('d/m/Y') }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="text-danger">Procedures</h4>
                     </div>
                 </div>
             </div>
