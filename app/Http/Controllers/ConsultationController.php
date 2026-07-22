@@ -93,6 +93,13 @@ class ConsultationController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        
+        $theConsultation = Consultation::find($id);
+
+        if (isset($theConsultation)) {
+            $theConsultation->delete();
+        }
+
+        return redirect('/consultation');
     }
 }
