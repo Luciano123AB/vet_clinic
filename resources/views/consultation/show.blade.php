@@ -10,7 +10,7 @@
             <div class="col-md-12">
                 <div class="box box-primary">
                     <div class="box-header">
-                        <a href="/consultations" class="btn btn-success">Atendiments</a>
+                        <a href="/consultation" class="btn btn-success">Atendiments</a>
                     </div>
                     <br>
 
@@ -33,7 +33,7 @@
                             </tbody>
                         </table>
 
-                        <h4 class="text-primary">Pet</h4>
+                        <h4 class="text-warning">Pet</h4>
                         <table class="table table-bordered table-striped">
                             <thead>
                                 <tr class="table-warning">
@@ -62,6 +62,24 @@
                         </table>
 
                         <h4 class="text-danger">Procedures</h4>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr class="table-danger">
+                                    <th style="width: 10px;">#</th>
+                                    <th>Name</th>
+                                    <th>Price(R$)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($theConsultation->procedures as $procedure)
+                                    <tr>
+                                        <td>{{ $procedure->id }}</td>
+                                        <td>{{ $procedure->name }}</td>
+                                        <td>{{ $procedure->price }}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
