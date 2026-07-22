@@ -69,7 +69,12 @@ class ConsultationController extends Controller
      */
     public function show(string $id)
     {
-        //
+        
+        $theConsultation = Consultation::find($id);
+        
+        if (isset($theConsultation)) {
+            return view('consultation.show', compact('theConsultation'));
+        }
     }
 
     /**
