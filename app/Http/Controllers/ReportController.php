@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Client;
+use App\Models\Consultation;
 use App\Models\Pet;
 use App\Models\Procedure;
 use App\Models\Vet;
@@ -73,6 +74,15 @@ class ReportController extends Controller
             
                 if (isset($vets)) {
                     return view('report.vets-report', compact('vets'));
+                }
+            break;
+
+            case 'consultations':
+                
+                $consultations = Consultation::all();
+            
+                if (isset($consultations)) {
+                    return view('report.consultations-report', compact('consultations'));
                 }
             break;
         }
