@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
 use Illuminate\Http\Request;
 
 class ReportController extends Controller
@@ -34,8 +35,17 @@ class ReportController extends Controller
      * Display the specified resource.
      */
     public function show(string $id)
-    {
-        //
+    {        
+        switch ($request->input('report_type')) {
+            case 'clients':
+
+                $clients = Client::all();
+            
+                if (isset($clients)) {
+                    return view('report.clients-report', compact('clients'));
+                }
+            break;
+        }
     }
 
     /**
