@@ -4,6 +4,7 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ConsultationController;
 use App\Http\Controllers\PetController;
 use App\Http\Controllers\ProcedureController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\VetController;
 use Illuminate\Support\Facades\Route;
 
@@ -50,3 +51,6 @@ Route::get('/consultation/new', [ConsultationController::class, 'create']);
 Route::post('/consultation', [ConsultationController::class, 'store']);
 Route::get('/consultation/show/{id}', [ConsultationController::class, 'show']);
 Route::get('/consultation/delete/{id}', [ConsultationController::class, 'destroy']);
+
+//Reports:
+Route::get('/report', [ReportController::class, 'index']);

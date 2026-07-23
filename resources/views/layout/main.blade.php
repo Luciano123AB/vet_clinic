@@ -37,7 +37,7 @@
                             <a class="nav-link" href="/consultation">Atendimentos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                            <a class="nav-link" href="/report">Relatórios</a>
                         </li>
                     </ul>
                 </div>
