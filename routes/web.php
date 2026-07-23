@@ -54,4 +54,4 @@ Route::get('/consultation/delete/{id}', [ConsultationController::class, 'destroy
 
 //Reports:
 Route::get('/report', [ReportController::class, 'index']);
-Route::get('/report/show', [ReportController::class, 'show']);
+Route::post('/report/show', [ReportController::class, 'show']);
