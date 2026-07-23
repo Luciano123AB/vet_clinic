@@ -2,7 +2,7 @@
 
 @section('body')
     <div class="alert alert-success" role="alert">
-        <h2>Procedures Report</h2>
+        <h2>Vets Report</h2>
     </div>
 
     <section class="content">
@@ -15,15 +15,21 @@
                                 <tr>
                                     <th style="width: 10px;">#</th>
                                     <th>Name</th>
-                                    <th>Price(R$)</th>
+                                    <th>Email</th>
+                                    <th>Cell Phone</th>
+                                    <th>Address</th>
+                                    <th>State</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($procedures as $procedure)
+                                @foreach ($vets as $vet)
                                     <tr>
-                                        <td>{{ $procedure->id }}</td>
-                                        <td>{{ $procedure->name }}</td>
-                                        <td>{{ $procedure->price }}</td>
+                                        <td>{{ $vet->id }}</td>
+                                        <td>{{ $vet->name }}</td>
+                                        <td>{{ $vet->email }}</td>
+                                        <td>{{ $vet->cell_phone }}</td>
+                                        <td>{{ $vet->address }}</td>
+                                        <td>{{ $vet->state }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>
