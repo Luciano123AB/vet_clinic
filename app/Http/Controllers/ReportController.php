@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Client;
 use App\Models\Pet;
+use App\Models\Procedure;
 use Illuminate\Http\Request;
 
 class ReportController extends Controller
@@ -53,6 +54,15 @@ class ReportController extends Controller
             
                 if (isset($pets)) {
                     return view('report.pets-report', compact('pets'));
+                }
+            break;
+
+            case 'procedures':
+                
+                $procedures = Procedure::all();
+            
+                if (isset($procedures)) {
+                    return view('report.procedures-report', compact('procedures'));
                 }
             break;
         }
