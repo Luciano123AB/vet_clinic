@@ -2,7 +2,7 @@
 
 @section('body')
     <div class="alert alert-success" role="alert">
-        <h2>Pets Report</h2>
+        <h2>Relatório de Pets</h2>
     </div>
 
     <section class="content">
@@ -14,12 +14,12 @@
                             <thead>
                                 <tr>
                                     <th style="width: 10px;">#</th>
-                                    <th style="width: 250px;">Photo</th>
-                                    <th>Name</th>
-                                    <th>Owner</th>
-                                    <th>Specie</th>
-                                    <th>Gender</th>
-                                    <th>Birth Date</th>
+                                    <th style="width: 250px;">Foto</th>
+                                    <th>Nome</th>
+                                    <th>Dono</th>
+                                    <th>Espécie</th>
+                                    <th>Sexo</th>
+                                    <th>Data de Nascimento</th>
                                 </tr>
                             </thead>
                             <tbody>

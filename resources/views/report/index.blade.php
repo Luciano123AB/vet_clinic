@@ -2,7 +2,7 @@
 
 @section('body')
     <div class="alert alert-success" role="alert">
-        <h2>Reports</h2>
+        <h2>Relatórios</h2>
     </div>
 
     <section class="content">
@@ -10,7 +10,7 @@
             <div class="col-md-12">
                 <div class="box box-primary">
                     <div class="box-body no-padding">
-                        <h4 class="text-primary">Select Report</h4>
+                        <h4 class="text-primary">Selecione o Relatório</h4>
                         <form action="/report/show" method="post" role="form">
                             @csrf
 
@@ -49,7 +49,7 @@
                             <br>
 
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-warning">Show</button>
+                                <button type="submit" class="btn btn-warning">Exibir</button>
                             </div>
                         </form>
                     </div>

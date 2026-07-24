@@ -317,9 +317,9 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Name</th>
-                                            <th>Price(R$)</th>
-                                            <th>Actions</th>
+                                            <th>Nome</th>
+                                            <th>Preço(R$)</th>
+                                            <th>Ações</th>
                                         </tr>
                                     </thead>
                                 </table>

@@ -2,7 +2,7 @@
 
 @section('body')
     <div class="alert alert-success" role="alert">
-        <h2>Consultations Report</h2>
+        <h2>Relatório de Atendimentos</h2>
     </div>
 
     <section class="content">
@@ -14,10 +14,10 @@
                             <thead>
                                 <tr>
                                     <th style="width: 10px;">#</th>
-                                    <th>Date</th>
+                                    <th>Data</th>
                                     <th>Pet</th>
-                                    <th>Owner</th>
-                                    <th>Vet</th>
+                                    <th>Dono</th>
+                                    <th>Veterinário</th>
                                     <th>Total(R$)</th>
                                 </tr>
                             </thead>
