@@ -2,7 +2,7 @@
 
 @section('body')
     <div class="alert alert-success" role="alert">
-        <h2>Vets</h2>
+        <h2>Veterinários</h2>
     </div>
 
     <section class="content">
@@ -10,7 +10,7 @@
             <div class="col-md-12">
                 <div class="box box-primary">
                     <div class="box-header">
-                        <a href="/vet/new" class="btn btn-success">New Vet</a>
+                        <a href="/vet/new" class="btn btn-success">Novo Veterinário</a>
                     </div>
                     <br>
 
@@ -19,11 +19,11 @@
                             <thead>
                                 <tr>
                                     <th style="width: 10px;">#</th>
-                                    <th>Name</th>
+                                    <th>Nome</th>
                                     <th>Email</th>
-                                    <th>Cell Phone</th>
-                                    <th>Address</th>
-                                    <th>State</th>
+                                    <th>Celular</th>
+                                    <th>Endereço</th>
+                                    <th>Estado</th>
                                     <th style="width: 250px;">&nbsp;</th>
                                 </tr>
                             </thead>
@@ -37,8 +37,8 @@
                                         <td>{{ $vet->address }}</td>
                                         <td>{{ $vet->state }}</td>
                                         <td>
-                                            <a href="/vet/edit/{{ $vet->id }}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>Edit</a>
-                                            <a href="/vet/delete/{{ $vet->id }}" class="btn btn-danger btn-xs" onclick="return confirm('Do you want to delete this record id = {{ $vet->id }}?')"><i class="fa fa-trash"></i>Delete</a>
+                                            <a href="/vet/edit/{{ $vet->id }}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>Editar</a>
+                                            <a href="/vet/delete/{{ $vet->id }}" class="btn btn-danger btn-xs" onclick="return confirm('Do you want to delete this record id = {{ $vet->id }}?')"><i class="fa fa-trash"></i>Deletar</a>
                                         </td>
                                     </tr>
                                 @endforeach

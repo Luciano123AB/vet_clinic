@@ -38,7 +38,7 @@
                                         <td>{{ $consultation->total_cost }}</td>
                                         <td>
                                             <a href="/consultation/show/{{ $consultation->id }}" class="btn btn-warning btn-xs"><i class="fa fa-edit"></i>Detalhes</a>
-                                            <a href="/consultation/delete/{{ $consultation->id }}" class="btn btn-danger btn-xs" onclick="return confirm('Do you want to delete this record id = {{ $consultation->id }}?')"><i class="fa fa-trash"></i>Delete</a>
+                                            <a href="/consultation/delete/{{ $consultation->id }}" class="btn btn-danger btn-xs" onclick="return confirm('Do you want to delete this record id = {{ $consultation->id }}?')"><i class="fa fa-trash"></i>Deletar</a>
                                         </td>
                                     </tr>
                                 @endforeach

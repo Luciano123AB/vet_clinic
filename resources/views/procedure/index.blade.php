@@ -2,7 +2,7 @@
 
 @section('body')
     <div class="alert alert-success" role="alert">
-        <h2>Procedures</h2>
+        <h2>Procedimentos</h2>
     </div>
 
     <section class="content">
@@ -10,7 +10,7 @@
             <div class="col-md-12">
                 <div class="box box-primary">
                     <div class="box-header">
-                        <a href="/procedure/new" class="btn btn-success">New Procedure</a>
+                        <a href="/procedure/new" class="btn btn-success">Novo Procedimento</a>
                     </div>
                     <br>
 
@@ -19,8 +19,8 @@
                             <thead>
                                 <tr>
                                     <th style="width: 10px;">#</th>
-                                    <th>Name</th>
-                                    <th style="width: 150px;">Price(R$)</th>
+                                    <th>Nome</th>
+                                    <th style="width: 150px;">Preço(R$)</th>
                                     <th style="width: 250px;">&nbsp;</th>
                                 </tr>
                             </thead>
@@ -31,8 +31,8 @@
                                         <td>{{ $procedure->name }}</td>
                                         <td>{{ $procedure->price }}</td>
                                         <td>
-                                            <a href="/procedure/edit/{{ $procedure->id }}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>Edit</a>
-                                            <a href="/procedure/delete/{{ $procedure->id }}" class="btn btn-danger btn-xs" onclick="return confirm('Do you want to delete this record id = {{ $procedure->id }}?')"><i class="fa fa-trash"></i>Delete</a>
+                                            <a href="/procedure/edit/{{ $procedure->id }}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>Editar</a>
+                                            <a href="/procedure/delete/{{ $procedure->id }}" class="btn btn-danger btn-xs" onclick="return confirm('Do you want to delete this record id = {{ $procedure->id }}?')"><i class="fa fa-trash"></i>Deletar</a>
                                         </td>
                                     </tr>
                                 @endforeach

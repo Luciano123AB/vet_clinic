@@ -2,7 +2,7 @@
 
 @section('body')
     <div class="alert alert-warning" role="alert">
-        <h2>Edit Procedure</h2>
+        <h2>Editar Procedimento</h2>
     </div>
 
     <section class="content">
@@ -28,7 +28,7 @@
                             <br>
 
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-success">Save</button>
+                                <button type="submit" class="btn btn-success">Savar</button>
                             </div>
                         </form>
                     </div>

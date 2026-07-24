@@ -2,7 +2,7 @@
 
 @section('body')
     <div class="alert alert-warning" role="alert">
-        <h2>Atendiment Details</h2>
+        <h2>Detalhes do Atendimento</h2>
     </div>
 
     <section class="content">
@@ -10,18 +10,18 @@
             <div class="col-md-12">
                 <div class="box box-primary">
                     <div class="box-header">
-                        <a href="/consultation" class="btn btn-success">Atendiments</a>
+                        <a href="/consultation" class="btn btn-success">Atendimentos</a>
                     </div>
                     <br>
 
                     <div class="box-body no-padding">
-                        <h4 class="text-primary">Atendiment</h4>
+                        <h4 class="text-primary">Atendimento</h4>
                         <table class="table table-bordered table-striped">
                             <thead>
                                 <tr class="table-primary">
                                     <th style="width: 50px;">#</th>
-                                    <th>Date</th>
-                                    <th>Total Value(R$)</th>
+                                    <th>Data</th>
+                                    <th>Valor Total(R$)</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -39,11 +39,11 @@
                                 <tr class="table-warning">
                                     <th style="width: 10px;">#</th>
                                     <th style="width: 250px;">Photo</th>
-                                    <th>Name</th>
-                                    <th>Owner</th>
-                                    <th>Specie</th>
-                                    <th>Gender</th>
-                                    <th>Birth Date</th>
+                                    <th>Nome</th>
+                                    <th>Dono</th>
+                                    <th>Espécie</th>
+                                    <th>Sexo</th>
+                                    <th>Data de Nascimento</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -61,13 +61,13 @@
                             </tbody>
                         </table>
 
-                        <h4 class="text-danger">Procedures</h4>
+                        <h4 class="text-danger">Procedimentos</h4>
                         <table class="table table-bordered table-striped">
                             <thead>
                                 <tr class="table-danger">
                                     <th style="width: 10px;">#</th>
-                                    <th>Name</th>
-                                    <th>Price(R$)</th>
+                                    <th>Nome</th>
+                                    <th>Preço(R$)</th>
                                 </tr>
                             </thead>
                             <tbody>

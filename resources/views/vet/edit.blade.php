@@ -2,7 +2,7 @@
 
 @section('body')
     <div class="alert alert-primary" role="alert">
-        <h2>Edit Vet</h2>
+        <h2>Editar Veterinário</h2>
     </div>
 
     <section class="content">
@@ -33,7 +33,7 @@
                                     <input type="text" class="form-control" id="address" name="address" value="{{ $theVet->address }}">
                                 </div>
                                 <div class="form-group">
-                                    <label>Estado (states of Brazil):</label>
+                                    <label>Estado (estados do Brazil):</label>
                                     <select class="form-control" id="state" name="state">
                                         <option value="AC" @if ($theVet->state == 'AC') {{ 'selected' }} @endif>AC</option>
                                         <option value="AL" @if ($theVet->state == 'AL') {{ 'selected' }} @endif>AL</option>
@@ -68,7 +68,7 @@
                             <br>
 
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-success">Save</button>
+                                <button type="submit" class="btn btn-success">Salvar</button>
                             </div>
                         </form>
                     </div>
