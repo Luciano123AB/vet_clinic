@@ -2,7 +2,7 @@
 
 @section('body')
     <div class="alert alert-success" role="alert">
-        <h2>Consultations</h2>
+        <h2>Atendimentos</h2>
     </div>
 
     <section class="content">
@@ -10,7 +10,7 @@
             <div class="col-md-12">
                 <div class="box box-primary">
                     <div class="box-header">
-                        <a href="/consultation/new" class="btn btn-success">New Consultation</a>
+                        <a href="/consultation/new" class="btn btn-success">Novo Atendimento</a>
                     </div>
                     <br>
 
@@ -19,10 +19,10 @@
                             <thead>
                                 <tr>
                                     <th style="width: 10px;">#</th>
-                                    <th>Date</th>
+                                    <th>Data</th>
                                     <th>Pet</th>
-                                    <th>Client</th>
-                                    <th>Vet</th>
+                                    <th>Dono</th>
+                                    <th>Veterinário</th>
                                     <th>Total(R$)</th>
                                     <th style="width: 250px;">&nbsp;</th>
                                 </tr>

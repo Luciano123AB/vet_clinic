@@ -129,7 +129,7 @@
                         <thead>
                             <tr>
                                 <th style="width: 10px;">#</th>
-                                <th>Name</th>
+                                <th>Nome</th>
                                 <th style="width: 140px;">&nbsp;</th>
                             </tr>
                         </thead>
@@ -149,7 +149,7 @@
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                 </div>
             </div>
         </div>
@@ -168,10 +168,10 @@
                         <thead>
                             <tr>
                                 <th style="width: 10px;">#</th>
-                                <th>Name</th>
-                                <th>Owner</th>
-                                <th>Specie</th>
-                                <th>Gender</th>
+                                <th>Nome</th>
+                                <th>Dono</th>
+                                <th>Espécie</th>
+                                <th>Sexo</th>
                                 <th style="width: 140px;">&nbsp;</th>
                             </tr>
                         </thead>
@@ -194,7 +194,7 @@
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                 </div>
             </div>
         </div>
@@ -213,8 +213,8 @@
                         <thead>
                             <tr>
                                 <th style="width: 10px;">#</th>
-                                <th>Name</th>
-                                <th>Price</th>
+                                <th>Nome</th>
+                                <th>Preço(R$)</th>
                                 <th style="width: 140px;">&nbsp;</th>
                             </tr>
                         </thead>
@@ -235,7 +235,7 @@
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                 </div>
             </div>
         </div>
@@ -243,7 +243,7 @@
     {{-- FIM - Modal Procedure --}}
 
     <div class="alert alert-primary" role="alert">
-        <h2>New Consultation</h2>
+        <h2>Novo Atendimento</h2>
     </div>
 
     <section class="content">

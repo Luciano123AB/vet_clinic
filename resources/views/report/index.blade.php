@@ -42,7 +42,7 @@
                                 <div class="radio">
                                     <label class="fs-4">
                                         <input type="radio" id="report_consultations" name="report_type" value="consultations">
-                                        Consultas
+                                        Atendimentos
                                     </label>
                                 </div>
                             </div>
