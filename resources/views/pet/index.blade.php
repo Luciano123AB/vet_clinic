@@ -10,7 +10,7 @@
             <div class="col-md-12">
                 <div class="box box-primary">
                     <div class="box-header">
-                        <a href="/pet/new" class="btn btn-success">New Pet</a>
+                        <a href="/pet/new" class="btn btn-success">Novo Pet</a>
                     </div>
                     <br>
 
@@ -19,12 +19,12 @@
                             <thead>
                                 <tr>
                                     <th style="width: 10px;">#</th>
-                                    <th style="width: 250px;">Photo</th>
-                                    <th>Name</th>
-                                    <th>Owner</th>
-                                    <th>Specie</th>
-                                    <th>Gender</th>
-                                    <th>Birth Date</th>
+                                    <th style="width: 250px;">Foto</th>
+                                    <th>Nome</th>
+                                    <th>Dono</th>
+                                    <th>Espécie</th>
+                                    <th>Sexo</th>
+                                    <th>Data de Nascimento</th>
                                     <th style="width: 250px;">&nbsp;</th>
                                 </tr>
                             </thead>
@@ -39,8 +39,8 @@
                                         <td>{{ $pet->gender }}</td>
                                         <td>{{ \Carbon\Carbon::parse($pet->birth_date)->format('d/m/Y') }}</td>
                                         <td>
-                                            <a href="/pet/edit/{{ $pet->id }}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>Edit</a>
-                                            <a href="/pet/delete/{{ $pet->id }}" class="btn btn-danger btn-xs" onclick="return confirm('Do you want to delete this record id = {{ $pet->id }}?')"><i class="fa fa-trash"></i>Delete</a>
+                                            <a href="/pet/edit/{{ $pet->id }}" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>Editar</a>
+                                            <a href="/pet/delete/{{ $pet->id }}" class="btn btn-danger btn-xs" onclick="return confirm('Do you want to delete this record id = {{ $pet->id }}?')"><i class="fa fa-trash"></i>Deletar</a>
                                         </td>
                                     </tr>
                                 @endforeach

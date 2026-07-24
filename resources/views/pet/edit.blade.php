@@ -19,7 +19,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="modalClientPetLabel">Clients</h1>
+                    <h1 class="modal-title fs-5" id="modalClientPetLabel">Clientes</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -27,7 +27,7 @@
                         <thead>
                             <tr>
                                 <th style="width: 10px;">#</th>
-                                <th>Name</th>
+                                <th>Nome</th>
                                 <th style="width: 140px;">&nbsp;</th>
                             </tr>
                         </thead>
@@ -47,14 +47,14 @@
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="alert alert-primary" role="alert">
-        <h2>Edit Pet</h2>
+    <div class="alert alert-warning" role="alert">
+        <h2>Editar Pet</h2>
     </div>
 
     <section class="content">
@@ -137,7 +137,7 @@
                             <br>
 
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-success">Save</button>
+                                <button type="submit" class="btn btn-success">Salvar</button>
                             </div>
                         </form>
                     </div>
